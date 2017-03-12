@@ -1,0 +1,74 @@
+/* AUTHOR: OLUMUYIWA KUKU
+
+	DATE: MAY 31, 2016
+
+	CUSTOM STYLESHEET */
+
+	body{
+		background-color: #eee;
+	}
+
+	.marketing h1{
+		text-decoration: underline;
+		padding-bottom: 55px;
+		text-align: center;
+	}
+	
+	h4{
+		font-size: 25px;
+	}
+
+	.carousel-img-1{
+		background: url("../img/1.jpg") center center no-repeat;
+		background-size: cover;
+	}
+
+	.carousel-img-2{
+		/*no "center center" no-repeat based on the particuar picture (4.jpg)"*/
+		background: url("../img/4.jpg") no-repeat;
+		background-size: cover;
+	}
+
+	.carousel-img-3{
+		background: url("../img/2.jpg") center center no-repeat;
+		background-size: cover;
+	}
+
+	.carousel-caption{
+		background-color: rgba(50, 50, 50, 0.5);
+		border-radius: 10px; 
+		padding:10px; 
+	}
+
+	.img-square{
+		/*border: 2px solid maroon;*/
+		padding: 12px;
+	}
+
+
+	.googlemap{
+		width: 350px;
+		height: 400px;
+	}
+
+	.grey-background{
+		background-color: grey;
+	}
+
+	.padding{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+@media only screen and (max-width: 700px){
+	.carousel-img-2{
+		/*no "center center" no-repeat based on the particuar picture (4.jpg)"*/
+		background: url("../img/4.jpg") center center no-repeat;
+		background-size: cover;
+	}
+	.googlemap{
+		width: 250px;
+		height: 250px;
+	}
+
+}

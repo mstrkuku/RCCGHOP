@@ -8,24 +8,26 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
 
-                <li ng-repeat="navitem in navbarItems" class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="/#!/main/home">{{ navitem }}
+                <li ng-repeat="navitem in navbarItems" ng-class="{active : activeMenu === navitem}" class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" ng-click="setActive(navitem)" href="/#!/main/{{navitem}}">{{ navitem }}
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+<!------------------------------------------------------------------------------------------------------------------->
 
+                <!--<li class="nav-item px-lg-4" ng-class="{active : activeMenu === 'Home'}">-->
+                    <!--<a class="nav-link text-uppercase text-expanded" href="/#!/main/home" ng-click="activeMenu = 'Home'">Home-->
+                        <!--<span class="sr-only">(current)</span>-->
+                    <!--</a>-->
+                <!--</li>-->
 
-                <li class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="/#!/main/home">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="/#!/main/about">About</a>
-                </li>
-                <li class="nav-item px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="/#!/main/contact">Contact</a>
-                </li>
+                <!--<li class="nav-item px-lg-4" ng-class="{active : activeMenu === 'About'}">-->
+                    <!--<a class="nav-link text-uppercase text-expanded" href="/#!/main/about" ng-click="activeMenu = 'About'">About</a>-->
+                <!--</li>-->
+
+                <!--<li class="nav-item px-lg-4" ng-class="{active : activeMenu === 'Contact'}">-->
+                    <!--<a class="nav-link text-uppercase text-expanded" href="/#!/main/contact" ng-click="activeMenu = 'Contact'">Contact</a>-->
+                <!--</li>-->
 
                 <!--<a ui-sref="hello" ui-sref-active="active">Hello</a>-->
 

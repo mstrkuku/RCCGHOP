@@ -17,11 +17,10 @@
 
     var svc = this;
 
+    svc.navbarItems = ['home', 'about', 'contact'];
     svc.activeState = $rootScope.activeState;
-    svc.navbarItems = ['Home', 'About', 'Contact'];
 
-
-      svc.setState = function(clickedState){
+    svc.setState = function(clickedState){
     	var clickedState = svc.activeState;
     };
 

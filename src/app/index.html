@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="mstrkuku, church, rccg, redeemed, christian, church, god">
   <meta name="author" content="olumuyiwa, kuku, mrkuku, mstrkuku">
-  <link rel="icon" href="../mk-icon.png">
+  <link rel="icon" href="../favicon.ico">
 
   <!--No Right Click-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -38,9 +38,6 @@
   <link rel="stylesheet" href="css/global.css">
 
 
-  <link rel="stylesheet" href="css/me.css">
-
-
   <!-- endinject -->
 
 </head>
@@ -51,7 +48,16 @@
       <span class="site-heading-lower">Norfolk</span>
     </h1>
 
+    <div class="text-center rccg-logo-container main-img">
+      <img class="rccg-logo img-fluid" src={{vm.labels.RCCG_LOGO}}>
+    </div>
+
     <navbar></navbar>
+
+    <div class="text-center rccg-logo-container secondary-img">
+      <img class="rccg-logo img-fluid" src={{vm.labels.RCCG_LOGO}}>
+    </div>
+
     <main-view></main-view>
     <foot></foot>
 
@@ -91,7 +97,10 @@
     <script src="js/labels.constants.js"></script>
 
 
-    <script src="js/foot/foot.directive.js"></script>
+    <script src="js/about/about.controller.js"></script>
+
+
+    <script src="js/about/about.directive.js"></script>
 
 
     <script src="js/common/common.service.js"></script>
@@ -100,16 +109,13 @@
     <script src="js/common/firebase.config.js"></script>
 
 
-    <script src="js/about/about.controller.js"></script>
-
-
-    <script src="js/about/about.directive.js"></script>
-
-
     <script src="js/contact/contact.controller.js"></script>
 
 
     <script src="js/contact/contact.directive.js"></script>
+
+
+    <script src="js/foot/foot.directive.js"></script>
 
 
     <script src="js/home/home.controller.js"></script>
@@ -124,13 +130,13 @@
     <script src="js/list/list.directive.js"></script>
 
 
+    <script src="js/main/main.directive.js"></script>
+
+
     <script src="js/navigation/nav.controller.js"></script>
 
 
     <script src="js/navigation/nav.directive.js"></script>
-
-
-    <script src="js/main/main.directive.js"></script>
 
 
     <!-- endinject -->

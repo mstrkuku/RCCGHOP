@@ -3,3 +3,107 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
+
+.true {
+  font-size: +1.15rem;
+  font-weight: bold;
+  color: #e6a756; }
+
+.rccg-logo-container {
+  padding: 5px;
+  margin: 5px; }
+  .rccg-logo-container .rccg-logo {
+    height: 100px;
+    width: 100px; }
+
+.site-heading {
+  margin-bottom: 0px; }
+
+.address strong {
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center; }
+
+@media (min-width: 992px) {
+  .list-hours {
+    width: 70%;
+    font-size: 1.1rem; }
+  .rccg-logo-container.secondary-img {
+    display: none; } }
+
+@media (max-width: 991px) {
+  .rccg-logo-container.main-img {
+    display: none; } }
+
+@media (max-width: 500px) {
+  .list-hours .contact-event {
+    display: none; } }
+
+/* ABOUT */
+.about-img {
+  opacity: 0.75; }
+
+.about-page-section.p-5:nth-child(odd) {
+  justify-content: flex-end; }
+
+.about-page-section.p-5:nth-child(even) {
+  justify-content: flex-start; }
+
+button.accordion {
+  background-color: inherit;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgba(20, 20, 20, 0.8);
+  transition: all 100ms cubic-bezier(0.24, 0.89, 0.4, 2.66); }
+
+button.accordion.active, button.accordion:hover {
+  background-color: inherit;
+  transform: scale(1); }
+
+button:hover {
+  transition: all 100ms cubic-bezier(0.24, 0.89, 0.4, 2.66); }
+
+div.panel {
+  background-color: inherit;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.24, 0.89, 0.4, 2.66);
+  opacity: 0; }
+
+div.panel.show {
+  opacity: 1;
+  max-height: 500px; }
+
+.show {
+  display: block !important; }
+
+/* iPhone X , 8, 7, 6 */
+@media (max-width: 375px) {
+  h2.section-heading .section-heading-lower {
+    font-size: 1.9rem; }
+  .list-hours {
+    font-size: 0.769rem; }
+    .list-hours .contact-day {
+      font-weight: bold; } }
+
+.p-5 {
+  padding: auto 0 auto 0; }
+
+.row {
+  margin-left: 0;
+  margin-right: 0; }
+
+.googlemap {
+  height: 500px;
+  width: 100%; }
+
+.footer a:link, a:visited {
+  color: rgba(255, 255, 255, 0.3); }
+
+.footer a:hover, a:active {
+  color: rgba(255, 255, 255, 0.8); }

@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular.module('app')
-        .directive('navbar', ['CommonSvc', function(CommonSvc) {
+        .directive('navbar', ['CommonSvc', '$state', function(CommonSvc, $state) {
             return {
                 templateUrl: 'js/navigation/nav.tpl.html',
                 controller: 'NavCtrl',

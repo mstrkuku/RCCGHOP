@@ -1,20 +1,101 @@
 <!-- About -->
 <section class="page-section about-heading">
 	<div class="container">
-		<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+		<img class="about-img img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.png" alt="">
 		<div class="about-heading-content">
 			<div class="row">
-				<div class="col-xl-9 col-lg-10 mx-auto">
+				<div class="col-xs-12 col-lg-10 mx-auto">
 					<div class="bg-faded rounded p-5">
 						<h2 class="section-heading mb-4">
-							<span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-							<span class="section-heading-lower">About Our Cafe</span>
+							<span class="section-heading-upper">Our Core</span>
+							<span class="section-heading-lower">Values</span>
 						</h2>
-						<p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-						<p class="mb-0">We guarantee that you will fall in <em>lust</em> with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+
+						<div ng-repeat="v in vm.coreValues" class="col-md-12">
+							<div class="row">
+								<button class="accordion" ng-click="v.stretch()">
+									<p class="col-sm-11 core-value-summary">{{v.summary}}<span class="octicon-chevron-down"></span></p>
+									<!--<p class="col-sm-1 pull-right glyphicon glyphicon-chevron-down"></p>-->
+								</button>
+
+								<div class="panel">
+									<p>{{v.paragraph}}</p>
+								</div>
+							</div>
+							<!--<span class="flex-column">➤</span>-->
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!--MISSION -->
+
+<section class="about-page-section page-section" ng-repeat="a in vm.about">
+	<div class="container">
+		<div class="product-item">
+			<div class="product-item-title d-flex">
+				<div class="bg-faded p-5 d-flex ml-auto rounded">
+					<h2 class="section-heading mb-0">
+						<span class="section-heading-upper">Our</span>
+						<span class="section-heading-lower">{{a.title}}</span>
+					</h2>
+				</div>
+			</div>
+			<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" ng-src={{a.imgPath}} alt="">
+			<div class="product-item-description d-flex mr-auto">
+				<div class="bg-faded p-5 rounded">
+					<p class="mb-0">
+						{{a.description}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--MISSION-->
+
+<!--<section class="page-section">-->
+	<!--<div class="container">-->
+		<!--<div class="product-item">-->
+			<!--<div class="product-item-title d-flex">-->
+				<!--<div class="bg-faded p-5 d-flex mr-auto rounded">-->
+					<!--<h2 class="section-heading mb-0">-->
+						<!--<span class="section-heading-upper">Delicious Treats, Good Eats</span>-->
+						<!--<span class="section-heading-lower">Bakery &amp; Kitchen</span>-->
+					<!--</h2>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-02.jpg" alt="">-->
+			<!--<div class="product-item-description d-flex ml-auto">-->
+				<!--<div class="bg-faded p-5 rounded">-->
+					<!--<p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+<!--</section>-->
+
+<!--<section class="page-section">-->
+	<!--<div class="container">-->
+		<!--<div class="product-item">-->
+			<!--<div class="product-item-title d-flex">-->
+				<!--<div class="bg-faded p-5 d-flex ml-auto rounded">-->
+					<!--<h2 class="section-heading mb-0">-->
+						<!--<span class="section-heading-upper">From Around the World</span>-->
+						<!--<span class="section-heading-lower">Bulk Speciality Blends</span>-->
+					<!--</h2>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-03.jpg" alt="">-->
+			<!--<div class="product-item-description d-flex mr-auto">-->
+				<!--<div class="bg-faded p-5 rounded">-->
+					<!--<p class="mb-0">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+<!--</section>-->

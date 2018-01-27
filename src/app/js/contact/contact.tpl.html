@@ -5,52 +5,39 @@
             <div class="col-xl-9 mx-auto">
                 <div class="cta-inner text-center rounded">
                     <h2 class="section-heading mb-5">
-                        <span class="section-heading-upper">Come On In</span>
-                        <span class="section-heading-lower">We're Open</span>
+                        <span class="section-heading-upper">Happy {{ vm.todayIs | uppercase }}!</span>
+                        <span class="section-heading-lower">Contact Us</span>
                     </h2>
                     <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            Sunday
-                            <span class="ml-auto">9:30 AM to Noon</span>
+
+                        <li ng-repeat="d in vm.schedule" class="col-sm-12 text-center list-unstyled-item list-hours-item row" ng-class="d.active">
+                            <span class="col-sm-4 mr-auto text-capitalize contact-day">{{ d.day }}</span>
+                            <span class="col-sm-4 contact-event"> {{d.event}}</span>
+                            <span class="col-sm-4 ml-auto contact-time">{{ d.time }}</span>
                         </li>
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            Monday
-                            <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                        </li>
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            Tuesday
-                            <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                        </li>
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            Wednesday
-                            <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                        </li>
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            Thursday
-                            <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                        </li>
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            Friday
-                            <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                        </li>
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            Saturday
-                            <span class="ml-auto">9:00 AM to 5:00 PM</span>
-                        </li>
+
                     </ul>
+
                     <p class="address mb-5">
                         <em>
-                            <strong>1116 Orchard Street</strong>
+                            <strong>{{vm.labels.CONTACT_DATA.ADDRESS.STREET}}</strong><br>
+                            <span>{{vm.labels.CONTACT_DATA.ADDRESS.PO_BOX}}</span>
+
                             <br>
-                            Golden Valley, Minnesota
+                            {{vm.labels.CONTACT_DATA.ADDRESS.CITY}}, {{vm.labels.CONTACT_DATA.ADDRESS.STATE}}
                         </em>
+
+                        <br/><br/>
+
+                        <strong>{{vm.labels.CONTACT_DATA.EMAIL}}</strong>
                     </p>
+
                     <p class="mb-0">
                         <small>
-                            <em>Call Anytime</em>
+                            <em>Keep in touch for prayer requests, comments and others questions.</em>
                         </small>
-                        <br>
-                        (317) 585-8468
+                        <br><br/>
+                        {{vm.labels.CONTACT_DATA.NUMBER}}
                     </p>
                 </div>
             </div>
@@ -60,7 +47,21 @@
 
 <section class="page-section about-heading">
     <div class="container">
-        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+        <!--<img class="img-fluid " src="img/about.jpg" alt="">-->
+
+        <!--<div class="col-md-5">-->
+            <iframe
+                    class="featurette-image center-block responsive googlemap rounded about-heading-img mb-3 mb-lg-0"
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d797.482608061804!2d-76.25054044907377!3d36.91592769121351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s818+East+Little+Creek+Road+Unit+C%2C+Norfolk%2C+VA!5e0!3m2!1sen!2sus!4v1437449055432"
+                    frameborder="0"
+                    style="border:0"
+                    allowfullscreen=""
+                    alt="map"
+                    height="500"
+                    width="500">
+            </iframe>
+        <!--</div>-->
+
         <div class="about-heading-content">
             <div class="row">
                 <div class="col-xl-9 col-lg-10 mx-auto">

@@ -25,13 +25,12 @@
 
 	var ref = firebase.database().ref();
 	svc.name = $firebaseObject(ref);
-	$rootScope.date = new Date().getDay();
+	svc.date = $rootScope.date = new Date().getDay();
 
-	svc.todayIs = function(){
+	svc.todayIs = function() {
 
         if ($rootScope.date === 1) {
         	var today = 'monday';
-        	// $setActive
         }
 
         if ($rootScope.date === 2) {
@@ -54,13 +53,13 @@
             var today = 'saturday';
         }
 
-        if ($rootScope.date === 7) {
+        if ($rootScope.date === 0) {
             var today = 'sunday';
         }
         return today;
     };
 
-	console.log(svc.todayIs());
+	console.log(svc.todayIs() + ' ' + svc.date);
 	svc.test = function(){
 		$log.debug('Testing $log in CommonSvc');
 		return console.log('running test service function');

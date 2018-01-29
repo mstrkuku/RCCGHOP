@@ -83,7 +83,7 @@ div.panel.show {
   display: block !important; }
 
 /* iPhone X , 8, 7, 6 */
-@media (max-width: 375px) {
+@media (max-width: 451px) {
   h2.section-heading .section-heading-lower {
     font-size: 1.9rem; }
   .list-hours {

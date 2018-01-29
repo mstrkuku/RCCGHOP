@@ -1,7 +1,15 @@
 <section class="page-section clearfix">
     <div class="container">
         <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src={{vm.labels.INTRO_IMG}} alt="">
+
+            <div style="color:white" class="carousel-container">
+                <div ng-controller="CarouselCtrl">
+                    <p class="carousel-message">{{carouselMessage}}</p>
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded carousel-img" src="img/bgs/{{picnum}}.jpeg" alt="">
+
+                </div>
+            </div>
+
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
                     <span class="section-heading-upper">Come</span>

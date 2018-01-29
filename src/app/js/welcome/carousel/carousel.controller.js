@@ -11,22 +11,6 @@
         $scope,
         $timeout
     ) {
-        // $scope.myInterval = 3000;
-        // $scope.slides = [
-        //     {
-        //         image: 'http://lorempixel.com/400/200/'
-        //     },
-        //     {
-        //         image: 'http://lorempixel.com/400/200/food'
-        //     },
-        //     {
-        //         image: 'http://lorempixel.com/400/200/sports'
-        //     },
-        //     {
-        //         image: 'http://lorempixel.com/400/200/people'
-        //     }
-        // ];
-
         //10 seconds delay
         // $timeout(function(){
         //     $scope.test1 = "Hello World!";

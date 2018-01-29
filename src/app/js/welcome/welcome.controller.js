@@ -1,8 +1,8 @@
 (function() {
     'use strict';
     angular.module('app')
-        .controller("HomeCtrl", HomeCtrl);
-    HomeCtrl.$inject = [
+        .controller("WelcomeCtrl", WelcomeCtrl);
+    WelcomeCtrl.$inject = [
         // 'scope',
         // '$timeout',
         'CommonSvc',
@@ -10,7 +10,7 @@
         '$log'
     ];
 
-    function HomeCtrl(
+    function WelcomeCtrl(
         // $scope,
         // $timeout,
         CommonSvc,
@@ -25,7 +25,7 @@
 
         function activate() {
             CommonSvc.activeState = 'home';
-            console.log('home directive loaded');
+            console.log('welcome directive loaded');
             console.log('img path for intro', labels);
             $log.debug("CommonSvc", CommonSvc.activeState);
 

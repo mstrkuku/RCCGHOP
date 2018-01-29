@@ -20,7 +20,7 @@
     var svc = this;
     svc.labels = labels;
 
-    svc.navbarItems = ['home', 'about', 'contact'];
+    svc.navbarItems = ['welcome', 'about', 'contact'];
     svc.activeState = $rootScope.activeState;
 
 	var ref = firebase.database().ref();

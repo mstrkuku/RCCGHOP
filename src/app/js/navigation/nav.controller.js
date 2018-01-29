@@ -19,7 +19,7 @@
         var vm = this;
 
         vm.labels = labels;
-        CommonSvc.activeState = "Home";
+        CommonSvc.activeState = "Welcome";
         $scope.navbarItems = CommonSvc.navbarItems;
         // $scope.activeMenu = CommonSvc.activeState;
 

@@ -7,30 +7,30 @@
     /** @ngInject */
     function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider
-            .when("", "/main/home")
+            .when("", "/home/welcome")
             .otherwise('/');
 
         $stateProvider
         //Container for the ui views
-            .state('main', {
-                url: '/main',
-                templateUrl: 'js/main/main.tpl.html'
+            .state('home', {
+                url: '/home',
+                templateUrl: 'js/home/home.tpl.html'
             })
 
-            /*Home*/
-            .state('main.home', {
-                url: '/home',
-                template: '<home>'
+            /*Welcome*/
+            .state('home.welcome', {
+                url: '/welcome',
+                template: '<welcome>'
             })
 
             /* About*/
-            .state('main.about', {
+            .state('home.about', {
                 url: '/about',
                 template: '<about>'
             })
 
             /* Contact */
-            .state('main.contact', {
+            .state('home.contact', {
                 url: '/contact',
                 template: '<contact>'
             });

@@ -259,7 +259,7 @@ angular.module('ui.router.router', ['ui.router.util']);
  * @description
  * # ui.router.state sub-module
  *
- * This module is a dependency of the main ui.router module. Do not include this module as a dependency
+ * This module is a dependency of the home ui.router module. Do not include this module as a dependency
  * in your angular app (use {@link ui.router} module instead).
  * 
  */
@@ -274,12 +274,12 @@ angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
  * @description
  * # ui.router
  * 
- * ## The main module for ui.router 
+ * ## The home module for ui.router
  * There are several sub-js included with the ui.router module, however only this module is needed
  * as a dependency within your angular app. The other js are for organization purposes.
  *
  * The js are:
- * * ui.router - the main "umbrella" module
+ * * ui.router - the home "umbrella" module
  * * ui.router.router - 
  * 
  * *You'll need to include **only** this module as the dependency within your angular app.*
@@ -2505,7 +2505,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   return result;
    * });
    *
-   * $stateProvider.state('home', {
+   * $stateProvider.state('welcome', {
    *   views: {
    *     'contact.list': { controller: 'ListController' },
    *     'contact.item': { controller: 'ItemController' }
@@ -2514,9 +2514,9 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *
    * // ...
    *
-   * $state.go('home');
-   * // Auto-populates list and item views with /partials/home/contact/list.html,
-   * // and /partials/home/contact/item.html, respectively.
+   * $state.go('welcome');
+   * // Auto-populates list and item views with /partials/welcome/contact/list.html,
+   * // and /partials/welcome/contact/item.html, respectively.
    * </pre>
    *
    * @param {string} name The name of the builder function to decorate. 
@@ -2553,8 +2553,8 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    * Registers a state configuration under a given state name. The stateConfig object
    * has the following acceptable properties.
    *
-   * @param {string} name A unique state name, e.g. "home", "about", "contacts".
-   * To create a parent/child state use a dot, e.g. "about.sales", "home.newest".
+   * @param {string} name A unique state name, e.g. "welcome", "about", "contacts".
+   * To create a parent/child state use a dot, e.g. "about.sales", "welcome.newest".
    * @param {object} stateConfig State configuration object.
    * @param {string|function=} stateConfig.template
    * <a id='template'></a>
@@ -2585,7 +2585,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   - {array.&lt;object&gt;} - state parameters extracted from the current $location.path() by 
    *     applying the current state
    *
-   * <pre>templateUrl: "home.html"</pre>
+   * <pre>templateUrl: "welcome.html"</pre>
    * <pre>templateUrl: function(params) {
    *     return myTemplates[params.pageId]; }</pre>
    *
@@ -2673,7 +2673,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   more details on acceptable patterns )
    *
    * examples:
-   * <pre>url: "/home"
+   * <pre>url: "/welcome"
    * url: "/users/:userid"
    * url: "/books/{bookid:[a-zA-Z_-]}"
    * url: "/books/{categoryid:int}"
@@ -2846,18 +2846,18 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    * // Some state name examples
    *
    * // stateName can be a single top-level name (must be unique).
-   * $stateProvider.state("home", {});
+   * $stateProvider.state("welcome", {});
    *
    * // Or it can be a nested state name. This state is a child of the
-   * // above "home" state.
-   * $stateProvider.state("home.newest", {});
+   * // above "welcome" state.
+   * $stateProvider.state("welcome.newest", {});
    *
    * // Nest states as deeply as needed.
-   * $stateProvider.state("home.newest.abc.xyz.inception", {});
+   * $stateProvider.state("welcome.newest.abc.xyz.inception", {});
    *
    * // state() returns $stateProvider, so you can chain state declarations.
    * $stateProvider
-   *   .state("home", {})
+   *   .state("welcome", {})
    *   .state("about", {})
    *   .state("contacts", {});
    * </pre>
@@ -3801,7 +3801,7 @@ var ngMinorVer = angular.version.minor;
  * single view and it is unnamed then you can populate it like so:
  * <pre>
  * <div ui-view></div> 
- * $stateProvider.state("home", {
+ * $stateProvider.state("welcome", {
  *   template: "<h1>HELLO!</h1>"
  * })
  * </pre>
@@ -3809,7 +3809,7 @@ var ngMinorVer = angular.version.minor;
  * The above is a convenient shortcut equivalent to specifying your view explicitly with the {@link ui.router.state.$stateProvider#views `views`}
  * config property, by name, in this case an empty name:
  * <pre>
- * $stateProvider.state("home", {
+ * $stateProvider.state("welcome", {
  *   views: {
  *     "": {
  *       template: "<h1>HELLO!</h1>"
@@ -3822,12 +3822,12 @@ var ngMinorVer = angular.version.minor;
  * in the same template. There's not really a compelling reason to name a view if its the only one, 
  * but you could if you wanted, like so:
  * <pre>
- * <div ui-view="main"></div>
+ * <div ui-view="home"></div>
  * </pre> 
  * <pre>
- * $stateProvider.state("home", {
+ * $stateProvider.state("welcome", {
  *   views: {
- *     "main": {
+ *     "home": {
  *       template: "<h1>HELLO!</h1>"
  *     }
  *   }    
@@ -3842,7 +3842,7 @@ var ngMinorVer = angular.version.minor;
  * </pre>
  * 
  * <pre>
- * $stateProvider.state("home", {
+ * $stateProvider.state("welcome", {
  *   views: {
  *     "": {
  *       template: "<h1>HELLO!</h1>"
@@ -4189,7 +4189,7 @@ function defaultOpts(el, $state) {
  * Here's an example of how you'd use ui-sref and how it would compile. If you have the
  * following template:
  * <pre>
- * <a ui-sref="home">Home</a> | <a ui-sref="about">About</a> | <a ui-sref="{page: 2}">Next page</a>
+ * <a ui-sref="welcome">Welcome</a> | <a ui-sref="about">About</a> | <a ui-sref="{page: 2}">Next page</a>
  *
  * <ul>
  *     <li ng-repeat="contact in contacts">
@@ -4200,7 +4200,7 @@ function defaultOpts(el, $state) {
  *
  * Then the compiled html would be (assuming Html5Mode is off and current state is contacts):
  * <pre>
- * <a href="#/home" ui-sref="home">Home</a> | <a href="#/about" ui-sref="about">About</a> | <a href="#/contacts?page=2" ui-sref="{page: 2}">Next page</a>
+ * <a href="#/welcome" ui-sref="welcome">Welcome</a> | <a href="#/about" ui-sref="about">About</a> | <a href="#/contacts?page=2" ui-sref="{page: 2}">Next page</a>
  *
  * <ul>
  *     <li ng-repeat="contact in contacts">
@@ -4214,7 +4214,7 @@ function defaultOpts(el, $state) {
  *     </li>
  * </ul>
  *
- * <a ui-sref="home" ui-sref-opts="{reload: true}">Home</a>
+ * <a ui-sref="welcome" ui-sref-opts="{reload: true}">Welcome</a>
  * </pre>
  *
  * @param {string} ui-sref 'stateName' can be any valid absolute or relative state

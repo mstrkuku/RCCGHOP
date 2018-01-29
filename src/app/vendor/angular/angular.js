@@ -10222,7 +10222,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
       if (jqLite.hasData(firstElementToRemove)) {
         // Copy over user data (that includes Angular's $scope etc.). Don't copy private
         // data here because there's no public interface in jQuery to do that and copying over
-        // event listeners (which is the main use of private data) wouldn't work anyway.
+        // event listeners (which is the home use of private data) wouldn't work anyway.
         jqLite.data(newNode, jqLite.data(firstElementToRemove));
 
         // Remove $destroy event listeners from `firstElementToRemove`
@@ -16468,7 +16468,7 @@ function $ParseProvider() {
  *
  * # Differences between Kris Kowal's Q and $q
  *
- *  There are two main differences:
+ *  There are two home differences:
  *
  * - $q is integrated with the {@link ng.$rootScope.Scope} Scope model observation
  *   mechanism in angular, which means faster propagation of resolution or rejection into your
@@ -18584,7 +18584,7 @@ function adjustMatchers(matchers) {
  * ng.$sceDelegateProvider#resourceUrlWhitelist $sceDelegateProvider.resourceUrlWhitelist} and
  * {@link ng.$sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider.resourceUrlBlacklist}
  *
- * For the general details about this service in Angular, read the main page for {@link ng.$sce
+ * For the general details about this service in Angular, read the home page for {@link ng.$sce
  * Strict Contextual Escaping (SCE)}.
  *
  * **Example**:  Consider the following case. <a name="example"></a>
@@ -31345,7 +31345,7 @@ var ngStyleDirective = ngDirective(function(scope, element, attr) {
         <div class="animate-switch-container"
           ng-switch on="selection">
             <div class="animate-switch" ng-switch-when="settings|options" ng-switch-when-separator="|">Settings Div</div>
-            <div class="animate-switch" ng-switch-when="home">Home Span</div>
+            <div class="animate-switch" ng-switch-when="home">Welcome Span</div>
             <div class="animate-switch" ng-switch-default>default</div>
         </div>
       </div>
@@ -31398,7 +31398,7 @@ var ngStyleDirective = ngDirective(function(scope, element, attr) {
       });
       it('should change to home', function() {
         select.all(by.css('option')).get(1).click();
-        expect(switchElem.getText()).toMatch(/Home Span/);
+        expect(switchElem.getText()).toMatch(/Welcome Span/);
       });
       it('should change to settings via "options"', function() {
         select.all(by.css('option')).get(2).click();
